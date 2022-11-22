@@ -18,12 +18,14 @@ class SplashScene extends Phaser.Scene {
   init(data) {
     this.cameras.main.setBackgroundColor("ffffff");
   }
+  //loads splash scene and displays this in the console
   preload() {
     console.log("Splash Scene");
   }
   create(data) {
     //pass
   }
+  //function to swith scenes
   update(time, delta) {
     this.scene.switch("titleScene");
   }
