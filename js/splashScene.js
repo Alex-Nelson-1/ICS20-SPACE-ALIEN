@@ -5,28 +5,28 @@
 //This is the Splash Scenes file
 
 /**
-* This class is the Splash scene
-*/
-class SplashScene extends Phaser.Scene{
-/** 
-* Method for constructor
-*/
+ * This class is the Splash scene
+ */
+class SplashScene extends Phaser.Scene {
+  /**
+   * Method for constructor
+   */
   constructor() {
-    super({key: 'splashScene'})
+    super({ key: "splashScene" });
   }
 
-  init(data){
-    this.cameras.main.setBackgroundColor("ffffff")
+  init(data) {
+    this.cameras.main.setBackgroundColor("ffffff");
   }
-  preload(){
-    console.log("Splash Scene")
+  preload() {
+    console.log("Splash Scene");
   }
   create(data) {
     //pass
   }
-  update(time, delta){
-    this.scene.switch("titleScene")
+  update(time, delta) {
+    this.scene.switch("titleScene");
   }
 }
 
-export default SplashScene
+export default SplashScene;
