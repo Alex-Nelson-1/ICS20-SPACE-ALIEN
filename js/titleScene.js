@@ -18,6 +18,7 @@ class TitleScene extends Phaser.Scene {
   init(data) {
     this.cameras.main.setBackgroundColor("ffffff");
   }
+  //loads splash scene and displays this in the console
   preload() {
     console.log("Title Scene");
   }
