@@ -5,37 +5,36 @@
 //This is the Splash Scenes file
 
 /**
- * This class is the Splash scene
- */
-class SplashScene extends Phaser.Scene {
-  /**
-   * Method for constructor
-   */
+* This class is the Splash scene
+*/
+class SplashScene extends Phaser.Scene{
+/** 
+* Method for constructor
+*/
   constructor() {
-    super({ key: "splashScene" });
+    super({key: 'splashScene'})
   }
 
-  init(data) {
-    this.cameras.main.setBackgroundColor("ffffff");
+  init(data){
+    this.cameras.main.setBackgroundColor("ffffff")
   }
-  preload() {
-    console.log("Splash Scene");
-    this.load.image("splashSceneBackground", "./assets/splashSceneImage.png");
+  //loads splash scene and displays “Splash Scene” in the console
+  preload(){
+    console.log("Splash Scene")
+    this.load.image("splashSceneBackground", "./assets/splashSceneImage.png")
   }
+  //Code to display the splash scene
   create(data) {
-    this.splashSceneBackgroundImage = this.add.sprite(
-      0,
-      0,
-      "splashSceneBackground"
-    );
-    this.splashSceneBackgroundImage.x = 1920 / 2;
-    this.splashSceneBackgroundImage.y = 1080 / 2;
+    this.splashSceneBackgroundImage = this.add.sprite(0, 0, "splashSceneBackground")
+    this.splashSceneBackgroundImage.x = 1920 / 2
+    this.splashSceneBackgroundImage.y = 1080 / 2
   }
-  update(time, delta) {
+  //Switches scene to title scene after a delay
+  update(time, delta){
     if (time > 3000) {
-      this.scene.switch("titleScene");
+    this.scene.switch("titleScene")
     }
   }
 }
 
-export default SplashScene;
+export default SplashScene
