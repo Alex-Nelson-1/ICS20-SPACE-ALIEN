@@ -5,14 +5,14 @@
 //This is the phaser 3 configuration file
 
 //Import Scenes
-import SplashScene from "./splashScene.js"
-import TitleScene from "./titleScene.js"
-import MenuScene from "./menuScene.js"
+import SplashScene from "./splashScene.js";
+import TitleScene from "./titleScene.js";
+import MenuScene from "./menuScene.js";
 
 //Game Scenes
-const splashScene = new SplashScene()
-const titleScene = new TitleScene()
-const menuScene = new MenuScene()
+const splashScene = new SplashScene();
+const titleScene = new TitleScene();
+const menuScene = new MenuScene();
 
 //Configure Game / Start Game
 const config = {
@@ -32,14 +32,14 @@ const config = {
     mode: Phaser.Scale.FIT,
     autoCenter: Phaser.Scale.CENTER_BOTH,
   },
-}
-const game = new Phaser.Game(config)
+};
+const game = new Phaser.Game(config);
 //console.log(game)
 
 //load scenes
 //Note: Any 'key' cannot be reused
-game.scene.add("splashScene", splashScene)
-game.scene.add("titleScene", titleScene)
-game.scene.add("menuScene", menuScene)
+game.scene.add("splashScene", splashScene);
+game.scene.add("titleScene", titleScene);
+game.scene.add("menuScene", menuScene);
 //Start scene
-game.scene.start("splashScene")
+game.scene.start("splashScene");
