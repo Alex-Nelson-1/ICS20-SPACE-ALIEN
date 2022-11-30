@@ -5,22 +5,22 @@
 //This is the Game Scenes file
 
 /**
- * This class is the Game scene 
+ * This class is the Game scene
  */
 class GameScene extends Phaser.Scene {
   /**
    * Method for constructor
    */
   constructor() {
-    super({ key: "gameScene" })
+    super({ key: "gameScene" });
   }
 
   init(data) {
-    this.cameras.main.setBackgroundColor("ffffff")
+    this.cameras.main.setBackgroundColor("ffffff");
   }
   //Displays "Game Scene" in the console
   preload() {
-    console.log("Game Scene")
+    console.log("Game Scene");
   }
   create(data) {
     //pass
@@ -30,4 +30,4 @@ class GameScene extends Phaser.Scene {
   }
 }
 
-export default GameScene
+export default GameScene;
