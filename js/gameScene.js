@@ -12,60 +12,60 @@ class GameScene extends Phaser.Scene {
    * Method for constructor
    */
   constructor() {
-    super({ key: "gameScene" })
+    super({ key: "gameScene" });
   }
 
   init(data) {
-    this.cameras.main.setBackgroundColor("ffffff")
+    this.cameras.main.setBackgroundColor("ffffff");
   }
   //Displays "Game Scene" in the console
   preload() {
-    console.log("Game Scene")
+    console.log("Game Scene");
 
-    this.load.image("starBackground", "./assets/starBackground.png")
-    this.load.image("spaceShip", "./assets/spaceShip.png")
+    this.load.image("starBackground", "./assets/starBackground.png");
+    this.load.image("spaceShip", "./assets/spaceShip.png");
   }
   create(data) {
-    this.background = this.add.image(0, 0, "starBackground").setScale(2.0)
-    this.background.setOrigin(0, 0)
+    this.background = this.add.image(0, 0, "starBackground").setScale(2.0);
+    this.background.setOrigin(0, 0);
 
-    this.ship = this.physics.add.sprite(1920 / 2, 1080 - 100, "spaceShip")
+    this.ship = this.physics.add.sprite(1920 / 2, 1080 - 100, "spaceShip");
   }
   update(time, delta) {
-    const keyLeftObj = this.input.keyboard.addKey("LEFT")
-    const keyRightObj = this.input.keyboard.addKey("RIGHT")
-    const keyDObj = this.input.keyboard.addKey("D")
-    const keyAObj = this.input.keyboard.addKey("A")
+    const keyLeftObj = this.input.keyboard.addKey("LEFT");
+    const keyRightObj = this.input.keyboard.addKey("RIGHT");
+    const keyDObj = this.input.keyboard.addKey("D");
+    const keyAObj = this.input.keyboard.addKey("A");
 
     //Allows the ship to move left when the left arrow key is pressed
     if (keyLeftObj.isDown === true) {
-      this.ship.x -= 15
+      this.ship.x -= 15;
       if (this.ship.x < 0) {
-        this.ship.x = 0
+        this.ship.x = 0;
       }
     }
     //Allows the ship to move right when the right arrow key is pressed
     if (keyRightObj.isDown === true) {
-      this.ship.x += 15
+      this.ship.x += 15;
       if (this.ship.x > 1920) {
-        this.ship.x = 1920
+        this.ship.x = 1920;
       }
     }
     //Allows the ship to move left when the A key is pressed
     if (keyDObj.isDown === true) {
-      this.ship.x += 15
+      this.ship.x += 15;
       if (this.ship.x > 1920) {
-        this.ship.x = 1920
+        this.ship.x = 1920;
       }
     }
     //Allows the ship to move right when the D arrow key is pressed
     if (keyAObj.isDown === true) {
-      this.ship.x -= 15
+      this.ship.x -= 15;
       if (this.ship.x < 0) {
-        this.ship.x = 0
+        this.ship.x = 0;
       }
     }
   }
 }
 
-export default GameScene
+export default GameScene;
